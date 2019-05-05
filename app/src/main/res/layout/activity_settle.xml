@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:windowSoftInputMode="adjustResize"
+    tools:context=".SettleActivity"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/settle_toolbar"
+        android:layout_width="match_parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_height="wrap_content"
+        app:theme="@style/ToolbarColoredBackArrow"
+        android:background="@color/colorPrimary">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_marginRight="8dp"
+            android:text="Settle Credit"
+            android:textColor="@color/white"
+            android:textSize="20sp"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/amt_settle_btn"
+                android:drawableTop="@drawable/ic_settle"
+                android:drawablePadding="4dp"
+                android:layout_alignParentRight="true"
+                android:drawableTint="@color/white"
+                android:text="Settle"
+                android:textSize="10sp"
+                android:textColor="@color/black"
+                android:layout_marginRight="8dp"
+                android:textAllCaps="false"
+                style="@android:style/Widget.Material.Button.Borderless.Small"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/add_from_settle"
+                android:drawableTop="@drawable/ic_plus"
+                android:drawablePadding="4dp"
+                android:drawableTint="@color/white"
+                android:layout_toLeftOf="@id/amt_settle_btn"
+                android:text="Add"
+                android:textSize="10sp"
+                android:textColor="@color/black"
+                android:textAllCaps="false"
+                android:visibility="visible"
+                style="@android:style/Widget.Material.Button.Borderless.Small"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/settle_reset"
+                android:drawableTop="@drawable/ic_reset"
+                android:drawablePadding="4dp"
+                android:layout_toLeftOf="@id/amt_settle_btn"
+                android:text="Reset"
+                android:textSize="10sp"
+                android:textColor="@color/black"
+                android:textAllCaps="false"
+                android:visibility="gone"
+                style="@android:style/Widget.Material.Button.Borderless.Small"/>
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.Toolbar>
+
+    <android.support.v7.widget.AppCompatEditText
+        android:id="@+id/settle_phone_no"
+        style="@style/SignupEditText"
+        android:layout_marginTop="24dp"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:inputType="phone"
+        android:maxLength="10"
+        android:drawableLeft="@drawable/ic_call"
+        android:drawableTint="@color/black"
+        android:drawablePadding="10dp"
+        android:hint="Phone Number"
+        app:layout_constraintTop_toBottomOf="@id/settle_toolbar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="20dp"
+        android:textColor="@color/red"
+        android:textStyle="bold"
+        android:id="@+id/edit_settle_ph"
+        android:visibility="gone"
+        android:text="Edit"
+        android:textSize="14sp"
+        android:clickable="true"
+        android:onClick="editPhone"
+        app:layout_constraintTop_toBottomOf="@id/settle_phone_no"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <android.support.v7.widget.AppCompatEditText
+        android:id="@+id/settle_amt"
+        style="@style/SignupEditText"
+        android:layout_marginTop="18dp"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:inputType="number"
+        android:hint="Amount Recieved*"
+        android:drawableLeft="@drawable/ic_rupee"
+        android:drawablePadding="10dp"
+        app:layout_constraintTop_toBottomOf="@id/settle_phone_no"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <android.support.v7.widget.AppCompatEditText
+        android:id="@+id/settle_details"
+        style="@style/SignupEditText"
+        android:layout_marginTop="18dp"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:inputType="textMultiLine"
+        android:singleLine="false"
+        android:maxLines="3"
+        android:hint="Details"
+        android:drawableLeft="@drawable/ic_other_details"
+        android:drawablePadding="10dp"
+        app:layout_constraintTop_toBottomOf="@id/settle_amt"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/settle_due"
+        android:layout_marginTop="16dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:textSize="18sp"
+        android:gravity="center_vertical"
+        android:textColor="@color/black"
+        android:text="Balance Due:"
+        android:drawableLeft="@drawable/ic_rich"
+        android:drawablePadding="10dp"
+        android:padding="2dp"
+        app:layout_constraintTop_toBottomOf="@id/settle_details"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/settle_due_val"
+        android:layout_marginTop="16dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="16dp"
+        android:gravity="center_vertical"
+        android:text="₹ 0.00"
+        android:textColor="@color/red"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:padding="2dp"
+        app:layout_constraintTop_toBottomOf="@id/settle_details"
+        app:layout_constraintLeft_toRightOf="@id/settle_due"/>
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/expand_all"
+        android:src="@drawable/ic_expand_all"
+        android:tint="@color/dark_grey"
+        android:padding="2dp"
+        android:visibility="gone"
+        style="@android:style/Widget.Material.Button.Borderless.Small"
+        app:layout_constraintTop_toBottomOf="@id/settle_due_val"
+        app:layout_constraintRight_toLeftOf="@id/collapse_all" />
+
+    <ImageButton
+        android:id="@+id/collapse_all"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="2dp"
+        android:visibility="gone"
+        android:src="@drawable/ic_collapse_all"
+        android:tint="@color/dark_grey"
+        style="@android:style/Widget.Material.Button.Borderless.Small"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/settle_due_val" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/settle_dues_recycler"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="8dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/expand_all"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:clipToPadding="false" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/settle_noDues"
+        android:text="No Dues Yet"
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:fontFamily="serif-monospace"
+        app:layout_constraintTop_toBottomOf="@id/expand_all"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</android.support.constraint.ConstraintLayout>

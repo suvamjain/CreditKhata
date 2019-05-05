@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "531698584215",
+    "firebase_url": "https://credit-khata.firebaseio.com",
+    "project_id": "credit-khata",
+    "storage_bucket": "credit-khata.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:531698584215:android:2fb316256b20ff50",
+        "android_client_info": {
+          "package_name": "com.kirana.creditkhata"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "531698584215-rl5ugdnlap4k98oe43ulc9mrtuj0clog.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.kirana.creditkhata",
+            "certificate_hash": "26fabc2984fcdb9b9c0ebc846e84a144b1e20b4b"
+          }
+        },
+        {
+          "client_id": "531698584215-thk1i8ijgoer7mus94trp5fvhn8irsu0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC1bULxvolTfEI6HMQsJALt3_KkOt4h97k"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "531698584215-thk1i8ijgoer7mus94trp5fvhn8irsu0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

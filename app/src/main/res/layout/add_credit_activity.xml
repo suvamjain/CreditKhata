@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:id="@+id/add_credit_form"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    android:windowSoftInputMode="adjustResize">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true"
+        android:background="@color/colorPrimaryDark"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:title="Add Credit"
+            app:titleTextColor="@color/white"
+            app:theme="@style/ToolbarColoredBackArrow"
+            android:background="@color/colorPrimary">
+
+            <!--<TextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:gravity="center_vertical"-->
+                <!--android:layout_marginRight="8sp"-->
+                <!--android:text="Add Credit"-->
+                <!--android:textColor="@color/white"-->
+                <!--android:textSize="20sp"/>-->
+
+            <!--<RelativeLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:gravity="center_vertical">-->
+
+                <!--<Button-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:id="@+id/add_save"-->
+                    <!--android:drawableTop="@drawable/ic_save"-->
+                    <!--android:drawablePadding="4dp"-->
+                    <!--android:layout_alignParentRight="true"-->
+                    <!--android:text="Save"-->
+                    <!--android:textSize="10sp"-->
+                    <!--android:textColor="@color/black"-->
+                    <!--android:layout_marginRight="8dp"-->
+                    <!--android:textAllCaps="false"-->
+                    <!--style="@android:style/Widget.Material.Button.Borderless.Small"/>-->
+
+                <!--<Button-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:id="@+id/add_reset"-->
+                    <!--android:drawableTop="@drawable/ic_reset"-->
+                    <!--android:drawablePadding="4dp"-->
+                    <!--android:layout_toLeftOf="@id/add_save"-->
+                    <!--android:text="Reset"-->
+                    <!--android:textSize="10sp"-->
+                    <!--android:textColor="@color/black"-->
+                    <!--android:textAllCaps="false"-->
+                    <!--style="@android:style/Widget.Material.Button.Borderless.Small"/>-->
+            <!--</RelativeLayout>-->
+        </android.support.v7.widget.Toolbar>
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/collapsing_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fitsSystemWindows="true"
+            android:layout_marginBottom="35dp"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            app:toolbarId="@+id/toolbar">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_gravity="bottom">
+
+                <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/add_phone_no"
+                    style="@style/SignupEditText"
+                    android:layout_marginTop="24dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:inputType="phone"
+                    android:maxLength="10"
+                    android:drawableLeft="@drawable/ic_call"
+                    android:drawableTint="@color/black"
+                    android:drawablePadding="10dp"
+                    android:hint="Phone Number*" />
+
+                <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/add_name"
+                    style="@style/SignupEditText"
+                    android:layout_marginTop="16dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:inputType="textCapWords|textAutoComplete"
+                    android:drawableLeft="@drawable/ic_name"
+                    android:drawablePadding="10dp"
+                    android:hint="Name*" />
+
+                <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/add_addr"
+                    style="@style/SignupEditText"
+                    android:layout_marginTop="16dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:inputType="textCapWords|textAutoComplete"
+                    android:drawableLeft="@drawable/ic_address"
+                    android:drawablePadding="10dp"
+                    android:hint="Address" />
+
+                <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/add_credit_amt"
+                    style="@style/SignupEditText"
+                    android:layout_marginTop="16dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:inputType="number"
+                    android:hint="Amount*"
+                    android:drawableLeft="@drawable/ic_rupee"
+                    android:drawablePadding="10dp" />
+
+                <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/add_other_detail"
+                    style="@style/SignupEditText"
+                    android:layout_marginTop="16dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:drawableLeft="@drawable/ic_other_details"
+                    android:drawablePadding="10dp"
+                    android:hint="Other Details"
+                    android:inputType="textMultiLine"
+                    android:singleLine="false"
+                    android:maxLines="3" />
+            </LinearLayout>
+        </android.support.design.widget.CollapsingToolbarLayout>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/add_cr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/fab_margin"
+        app:fabSize="normal"
+        android:tint="@color/white"
+        android:backgroundTint="@color/colorPrimaryDark"
+        app:layout_anchor="@id/app_bar"
+        app:layout_anchorGravity="bottom|right"
+        app:srcCompat="@drawable/ic_plus"
+        app:borderWidth="0dp"
+        app:elevation="0dp"/>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/add_dr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="80dp"
+        app:fabSize="normal"
+        android:tint="@color/white"
+        android:backgroundTint="@color/colorPrimaryDark"
+        app:layout_anchor="@id/add_cr"
+        app:layout_anchorGravity="center_vertical"
+        android:layout_gravity="center_vertical"
+        app:srcCompat="@drawable/ic_settle"
+        app:borderWidth="0dp"
+        app:elevation="0dp"
+        android:visibility="gone"/>
+
+</android.support.design.widget.CoordinatorLayout>

@@ -1,0 +1,79 @@
+<resources>
+    <string name="app_name">Credit Khata</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_login">Sign in</string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password (optional)</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email completions."
+    </string>
+    <string name="add_credit">Are you sure you want to add this credit ?</string>
+    <string name="change_pwd">Are you sure you want to change your password ?</string>
+
+    <string name="action_settle">Settle</string>
+    <string name="settle_credit">Are you sure you want to settle this credit ?</string>
+
+    <string-array name="list_spinner">
+        <item>Credits</item>
+        <!--<item>Debits</item>-->
+        <!--<item>All</item>-->
+    </string-array>
+
+
+    <string-array name="list_threshold">
+        <item>15 days</item>
+        <item>1 month</item>
+        <item>2 months</item>
+        <item>4 months</item>
+        <item>6 months</item>
+        <item>8 months</item>
+        <item>1 year</item>
+    </string-array>
+
+    <string-array name="list_repeat">
+        <item>1</item>
+        <item>5</item>
+        <item>10</item>
+        <item>15</item>
+        <item>30</item>
+    </string-array>
+
+    <string name="menu_item_scroll_to_bottom">Scroll to Bottom</string>
+    <string name="menu_item_inspect">Inspect</string>
+    <string name="menu_item_reload">Reload</string>
+    <string name="inspect_title">Inspection</string>
+    <string name="inspect_empty">No visible items</string>
+    <string name="inspect_header_adapter_position">First visible header adapter position: %1$d</string>
+    <string name="inspect_item_adapter_position">First visible item adapter position: %1$d</string>
+    <string name="inspect_footer_adapter_position">First visible footer adapter position: %1$d</string>
+    <string name="alert_dialog_scroll_title">Scroll</string>
+    <string name="alert_dialog_scroll_start">Start</string>
+    <string name="alert_dialog_scroll_middle">Middle</string>
+    <string name="alert_dialog_scroll_end">End</string>
+    <string name="alert_dialog_button_title_jump">Jump</string>
+    <string name="alert_dialog_button_title_smooth">Smooth</string>
+    <string name="search_hint">Search Name or Phone…</string>
+    <string name="action_search">Search</string>
+    <string name="no_search_results">No search results found for \'%s\'</string>
+    <string name="popup_tag">You can edit details tag above to easily remember a transaction</string>
+    <string name="auth_failed">Authentication failed: Invalid email or password !!</string>
+    <string name="forgot_password_msg">We just need your registered Email Id to send you password reset instructions</string>
+    <string name="btn_back"><![CDATA[<< Back]]></string>
+    <string name="default_notification_channel_id">credit_due_notification</string>
+    <string name="set_thres">Set Threshold Value</string>
+    <string name="set_repeat">Repeat after</string>
+
+    <string-array name="scroll_positions">
+        <item>@string/alert_dialog_scroll_start</item>
+        <item>@string/alert_dialog_scroll_middle</item>
+        <item>@string/alert_dialog_scroll_end</item>
+    </string-array>
+
+</resources>

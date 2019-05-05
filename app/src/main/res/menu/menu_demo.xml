@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto">
+
+	<item
+		android:id="@+id/scrollToBottom"
+	    android:title="@string/menu_item_scroll_to_bottom"
+	    android:icon="@drawable/ic_filter"
+	    app:showAsAction="ifRoom"/>
+
+	<item android:id="@+id/menuItemInspect"
+	      android:title="@string/menu_item_inspect"
+	      android:icon="@drawable/ic_expand_more_black_24dp"
+	      app:showAsAction="ifRoom"/>
+
+	<item
+		android:id="@+id/reloadMenuItem"
+		android:title="@string/menu_item_reload"
+		android:icon="@drawable/ic_reset"
+		app:showAsAction="never"
+		/>
+
+</menu>

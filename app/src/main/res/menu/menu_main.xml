@@ -1,0 +1,27 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.kirana.creditkhata.MainActivity">
+
+    <item
+        android:id="@+id/action_profile"
+        android:orderInCategory="100"
+        android:title="Profile"
+        android:icon="@drawable/ic_profile"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/action_settings"
+        android:orderInCategory="110"
+        android:icon="@drawable/ic_settings"
+        android:title="Settings"
+        android:visible="true"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/action_logout"
+        android:orderInCategory="115"
+        android:icon="@drawable/ic_password"
+        android:title="Logout"
+        app:showAsAction="never"/>
+</menu>
